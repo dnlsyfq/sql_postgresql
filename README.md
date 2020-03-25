@@ -3,7 +3,22 @@
 **Library**
 psycopg2
 
+```
+import psycopg2
+conn = psycopg2.connect(dbname="postgres" , user="postgres")
+conn.autocommit= True
+cursor = conn.cursor()
+cursor.execute("SQL Query")
+conn.close()
+```
+
+
 **PostgreSQL commands**
+
+* login
+
+psql -U <name>
+
 * List databases
 ```
 \l
